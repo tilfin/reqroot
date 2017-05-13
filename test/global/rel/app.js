@@ -1,4 +1,3 @@
-console.log('*** Test in global ***');
 require('reqroot');
 
 const Book = reqroot('models/book');

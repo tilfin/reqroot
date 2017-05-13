@@ -2,3 +2,10 @@ language: node_js
 node_js:
   - "7"
   - "6"
+before_script:
+  - cd test/global; npm install
+  - cd test/module; npm install
+script:
+  - npm test
+  - cd test/global; npm test
+  - cd test/module; npm test

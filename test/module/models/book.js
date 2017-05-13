@@ -1,4 +1,4 @@
-const reqroot = require('../../../index'); // require('reqroot');
+const reqroot = require('reqroot');
 
 const arrayUtil = reqroot('utils/array');
 

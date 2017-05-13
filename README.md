@@ -9,6 +9,8 @@ requiring a module path resolved from application root dir
 
 Define `require('reqroot')` in the file run directly from Node.js.
 
+For test, use *mocha* `-r --require` argument as `mocha -r reqroot`.
+
 ### Example
 
 #### app.js
@@ -32,7 +34,7 @@ Book.fetchNames().then(names => {
 
 #### models/book.js
 
-`reqroot` can be used directly in relative modules because global.reqroot is defined at the time required in *app.js*.
+**reqroot** can be used directly in relative modules because *global.reqroot* is defined at the time required in *app.js*.
 
 ```js
 const arrayUtil = reqroot('utils/array');
@@ -49,6 +51,8 @@ exports.fetchNames = () => {
 ```
 
 ## Use in a module
+
+any sub modules, not run file
 
 ```js
 const reqroot = require('reqroot');

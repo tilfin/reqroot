@@ -1,0 +1,14 @@
+{
+  "name": "reqroot-test-global",
+  "scripts": {
+    "app": "node app.js",
+    "rel/app": "node rel/app.js",
+    "test": "mocha -r reqroot 'test/**/*test.js'"
+  },
+  "dependencies": {
+    "reqroot": "file:../../"
+  },
+  "devDependencies": {
+    "mocha": "^3.3.0"
+  }
+}

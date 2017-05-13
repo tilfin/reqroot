@@ -1,0 +1,13 @@
+{
+  "name": "reqroot-test-module",
+  "scripts": {
+    "app": "node app.js",
+    "test": "mocha 'test/**/*test.js'"
+  },
+  "dependencies": {
+    "reqroot": "file:../../"
+  },
+  "devDependencies": {
+    "mocha": "^3.3.0"
+  }
+}
