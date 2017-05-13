@@ -1,0 +1,22 @@
+{
+  "name": "reqroot",
+  "version": "1.0.0",
+  "description": "require a module path resolved from application root dir",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/global/app.js; node test/module/app.js;"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tilfin/reqroot.git"
+  },
+  "keywords": [
+    "require"
+  ],
+  "author": "Toshimitsu Takahashi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tilfin/reqroot/issues"
+  },
+  "homepage": "https://github.com/tilfin/reqroot#readme"
+}
