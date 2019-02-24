@@ -1,7 +1,9 @@
 language: node_js
 node_js:
-  - "7"
-  - "6"
+  - "11"
+  - "10.10"
+  - "8.10"
+  - "6.10"
 before_script:
   - cd test/global; npm install
   - cd test/module; npm install
