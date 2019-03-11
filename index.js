@@ -3,7 +3,12 @@ const path = require('path');
 const rootDir = (() => {
   const mainFilename = require.main.filename;
   if (mainFilename.includes('/node_modules/')) {
-    return process.env.INIT_CWD + '/';
+    const cwd = process.env.INIT_CWD;
+    if (cwd) {
+      return process.env.INIT_CWD + '/';
+    } else {
+      return mainFilename.replace(/\/node_modules.+$/, '/')
+    }
   } else {
     return path.dirname(mainFilename) + '/';
   }
