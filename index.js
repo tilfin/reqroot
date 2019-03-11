@@ -1,11 +1,17 @@
 const path = require('path');
-const rootDir = path.resolve('.') + '/';
 
-if (require.main === module.parent) {
-  global._rootdir = rootDir;
-  global.reqroot = function (file) {
-	return require(_rootdir + file);
+const rootDir = (() => {
+  const mainFilename = require.main.filename;
+  if (mainFilename.includes('/node_modules/')) {
+    return process.env.INIT_CWD + '/';
+  } else {
+    return path.dirname(mainFilename) + '/';
   }
+})();
+
+global._rootdir = rootDir;
+global.reqroot = function (file) {
+  return require(_rootdir + file);
 }
 
 module.exports = function reqroot(file) {
